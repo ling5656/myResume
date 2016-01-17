@@ -351,6 +351,7 @@ html, body {
 
 .a3 .por {
     display: block;
+    margin-left: 30px;
     width: 250px;
     height: 250px;
     background: rgb(253, 234, 6);
@@ -373,7 +374,7 @@ html, body {
 .a3 .lss {
     position: absolute;
     top: 28%;
-    left: 50%;
+    left: 52%;
     font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
     font-size: 65px;
     font-weight: bold;
@@ -383,8 +384,8 @@ html, body {
 .a3 .xhx {
     display: block;
     position: relative;
-    width: 340px;
-    left: 265px;
+    width: 270px;
+    left: 295px;
     top: -80px;
 }
 
@@ -653,7 +654,7 @@ html, body {
     line-height: 100px;
     text-align: center;
     color: #555;
-    font-size: 80px;
+    font-size: 40px;
     font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
 
 }
@@ -689,9 +690,10 @@ html, body {
 
 .a6 p {
     position: relative;
-    top: 5%;
-    width: 105px;
-    height: 105px;
+    top: 15%;
+    left:8%;
+    width: 80px;
+    height: 80px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 25px;
@@ -702,7 +704,7 @@ html, body {
 .a6 .tb1 {
     background: url("images/qq.png") no-repeat center;
     background-color: #BEDD6B;
-    background-size: 80%;
+    background-size: 60%;
     -webkit-transform: translate(-1000px, 0);
     text-align: center;
 
