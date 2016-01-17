@@ -352,6 +352,7 @@ html, body {
 .a3 .por {
     display: block;
     margin-left: 30px;
+    margin-top: 8px;
     width: 250px;
     height: 250px;
     background: rgb(253, 234, 6);
@@ -704,7 +705,7 @@ html, body {
 .a6 .tb1 {
     background: url("images/qq.png") no-repeat center;
     background-color: #BEDD6B;
-    background-size: 60%;
+    background-size: 70%;
     -webkit-transform: translate(-1000px, 0);
     text-align: center;
 
