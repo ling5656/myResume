@@ -32,8 +32,11 @@
     $('no').click(function () {
         $('#pageHome').addClass('open');
     });
-    $('#submit').click(function () {
+    $('#submit').click(function (e) { e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
         $('#pageList').show();
+
         var oText = document.querySelectorAll(".pres ul li input[type='text']");
         for (var i = 0; i < oText.length; i++) {
             //清空前后的空格
