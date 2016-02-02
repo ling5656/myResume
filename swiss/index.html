@@ -62,15 +62,22 @@
         </div>
     </div>
     <div class="pres">
-        <ul>
-            <li val="真实姓名"><input val="真实姓名" type="text" placeholder="真实姓名"/></li>
-            <li val="手机号"><input val="手机号" type="text" placeholder="手机号"/></li>
-            <li val="电子邮件"><input val="电子邮件" type="text" placeholder="电子邮件"/></li>
-            <li val="所在城市"><input val="所在城市" type="text" placeholder="所在城市"/></li>
-            <li val="公司名称"><input val="公司名称" type="text" placeholder="公司名称"/></li>
-            <li val="职位"><input val="职位" type="text" placeholder="职位"/></li>
-            <li class="submit" id="submit"><input id="bth" type="button" value="提交"/></li>
-        </ul>
+        <form>
+            <ul>
+                <li val="真实姓名"><input class="name" val="真实姓名" type="text" placeholder="真实姓名" required/></li>
+                <li val="手机号"><input val="手机号" id="private_phone" name="private_phone" placeholder="手机号"
+                                     pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$"
+                                     type="text" required/></li>
+                <li val="电子邮件"><input class="email" val="电子邮件" type="email" placeholder="电子邮件" required/></li>
+                <li val="所在城市"><input val="所在城市" type="text" placeholder="所在城市" required/></li>
+                <li val="公司名称"><input val="公司名称" type="text" placeholder="公司名称" required/></li>
+                <li val="职位"><input val="职位" type="text" placeholder="职位" required/></li>
+                <!--<input name="submit" class="btn" type="submit" value="Send" />-->
+
+                <li id="submit" class="submit"><input class="btn" id="btn" name="submit" type="submit" value="提交"/></li>
+                <!--<li class="submit" id="submit"><input class="btn" id="bth" type="submit" value="提交"/></li>-->
+            </ul>
+        </form>
     </div>
     <div class="context" id="pageList">
         <!--<diV class="total">-->
@@ -168,6 +175,7 @@
 <div class="context" id="detailsPage">
     <div class="header">
         <p class="headerInfo"><strong>夏季市场活动发布会</strong></p>
+        <div id="det_close" style="background: #ccc"><img src="images/icon_close.svg" alt=""/></div>
     </div>
     <div class="infoImg"></div>
     <p class="infoDes">您好，瑞士国家旅游局将于4月15日在北京XXX酒店举行2016年夏季市场活动发布会，我们诚邀您的参加。</p>
@@ -179,6 +187,8 @@
 </div>
 
 </body>
+<script charset="utf-8" type="text/javascript" src="modernizr.js"></script>
+<script charset="utf-8" type="text/javascript" src="jquery.js"></script>
 <script charset="utf-8" type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script charset="utf-8" type="text/javascript" src="index.js"></script>
 </html>
