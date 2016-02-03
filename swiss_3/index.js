@@ -47,7 +47,7 @@
                 return;
             }
             if (oText[i].getAttribute("val") == "手机号") {
-                if (!(/^1[3|4|5|8]\d{9}$/.test(oText[i].value))) {
+                if (!(/^1[3458]\d{9}$/.test(oText[i].value))) {
                     alert("输入的手机号格式不正确!");
                     return;
                 }

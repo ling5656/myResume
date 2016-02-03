@@ -1,8 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 html, body {
@@ -10,7 +8,11 @@ html, body {
     /*overflow: hidden;*/
     /*font-size: 14px;*/
 }
-
+.wholePart{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 .context {
     /*overflow: hidden;*/
 }
@@ -145,10 +147,13 @@ html, body {
     height: 100%;
     transition: 0.2s;
     transform: translate(0, 0);
+    -webkit-transition: 0.2s;
+    -webkit-transform: translate(0, 0);
 }
 
 #pageHome.close {
     transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
 }
 
 .pageHomeMove {
@@ -217,6 +222,8 @@ html, body {
     display: none;
     transition: 0.2s;
     transform: translate(100%, 0);
+    -webkit-transition: 0.2s;
+    -webkit-transform: translate(100%, 0);
     width: 100%;
     height: 100%;
     background: url("images/Background_blur1212.jpg")no-repeat;
@@ -228,15 +235,19 @@ html, body {
 
 #pageInfo.open {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
 }
 
 #pageInfo.open .pres {
     transition: 0.2s;
     transform: scale(1, 1);
+    -webkit-transition: 0.2s;
+    -webkit-transform: scale(1, 1);
 }
 
 #pageInfo.open .pres.zoomOut {
     transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
 }
 
 /*.total {*/
@@ -343,10 +354,13 @@ html, body {
     display: none;
     transition: 0.2s;
     transform: translate(0, 100%);
+    -webkit-transition: 0.2s;
+    -webkit-transform: translate(0, 100%);
 }
 
 #pageList.open {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
 }
 
 #pageList .homePage {
@@ -422,19 +436,24 @@ html, body {
 /*------------------*/
 #pageList.close {
     transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
 }
 
 #pageList.closeBack {
     transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
 }
 
 #pageList.open {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
 }
 
 #detailsPage {
     transition: 0.2s;
     transform: translate(100%, 0);
+    -webkit-transition: 0.2s;
+    -webkit-transform: translate(100%, 0);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -445,10 +464,12 @@ html, body {
 
 #detailsPage.open {
     transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
 }
 
 #detailsPage.close {
     transform: translate(100%, 0);
+    -webkit-transform: translate(100%, 0);
 }
 
 /*-------------------*/
