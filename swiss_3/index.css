@@ -15,15 +15,15 @@ html, body {
     /*overflow: hidden;*/
 }
 
-.bg {
-    width: 100%;
-    height: 100%;
-    background: url("images/BacG.jpg") right center no-repeat;
-    background-size: cover;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
+/*.bg {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: url("images/BacG.jpg") right center no-repeat;*/
+    /*background-size: cover;*/
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*top: 0;*/
+/*}*/
 
 .logo {
     height: 82px;
@@ -136,7 +136,13 @@ html, body {
 /*第一页*/
 #pageHome {
     display: block;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: -0.65%;
+    background: url("images/BacG.jpg")no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
     transition: 0.2s;
     transform: translate(0, 0);
 }
@@ -498,7 +504,9 @@ html, body {
     .title .main1 .ul1 li a {
         padding: 8px;
     }
-
+    #pageHome{
+        top: -2.5px;
+    }
     .context .pres {
         margin-top: 25px;
     }
