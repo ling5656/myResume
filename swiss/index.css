@@ -7,7 +7,7 @@
 
 html, body {
     width: 100%;
-
+    /*overflow: hidden;*/
     /*font-size: 14px;*/
 }
 
@@ -344,6 +344,7 @@ html, body {
     height: 68px;
     /*border: 1px solid red;*/
     box-shadow: 0 1px 1px #000;
+    position: relative;
 }
 
 .headerInfo {
@@ -352,9 +353,20 @@ html, body {
     padding: 20px;
 }
 
+#det_close {
+    position: absolute;
+    left: 85%;
+    top: 40%;
+    background: #C1C1C1;
+}
+
 /*------------------*/
 #pageList.close {
     transform: translate(-100%, 0);
+}
+
+#pageList.closeBack {
+    transform: translate(0, 100%);
 }
 
 #pageList.open {
@@ -409,8 +421,23 @@ html, body {
     margin: 16px;
 }
 
-.c1 {
-    -webkit-transform: translate(0, 2000px);
+.headC {
+    position: relative;
+}
+
+.headC .ico_list {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 85%;
+}
+
+.headC .ico_list img.c1 {
+    transform: rotate(90deg);
+}
+
+.headC .ico_list img.c2 {
+    transform: rotate(-90deg);
 }
 
 @media screen and (max-height: 480px) {

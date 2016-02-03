@@ -24,6 +24,7 @@
 
     $('#yes').click(function () {
         $('#pageInfo').show();
+
         setTimeout(function () {
             $('#pageInfo').addClass('open');
             $('#pageHome').addClass('close');
@@ -34,10 +35,9 @@
     });
 
     $('#submit').click(function (e) {
-        e = e || window.event;
-        e.preventDefault ? e.preventDefault() : e.returnValue = false;
         $('#pageList').show();
-
+        $(".headC .ico_list").show();
+        $(".headC .ico_list img").removeClass().addClass("c1");
         //var oText = document.querySelectorAll(".pres ul li input[type='text']");
         //for (var i = 0; i < oText.length; i++) {
         //    //清空前后的空格
@@ -58,34 +58,47 @@
         //        }
         //    }
         //}
-
         setTimeout(function () {
             $('#pageInfo .pres').addClass('zoomOut');
             $('#pageList').addClass('open');
             $('body').css({overflow: 'scroll'})
         }, 0);
-
-        //第四页
-        $("div.homeDir").click(function () {
-            $("#detailsPage").show();
-            setTimeout(function () {
-                $('#detailsPage').addClass('open');
-                $('#pageList').addClass('close');
-                $('body').css({overflow: 'hidden'});
-            }, 400);
-        });
-        $("#det_close").click(function () {
-            $("#pageList").show();
-            setTimeout(function () {
-                $('#detailsPage').addClass('close');
-                $('#pageList').removeClass('close');
-                $('#detailsPage').removeClass('open');
-                $('#detailsPage').removeClass('close');
-                $('body').css({overflow: 'scroll'});
-            }, 400);
-        });
     });
-
+    $(".headC .ico_list").bind("click",function (e) {
+        if (!$("#pageInfo .pres").hasClass("zoomOut")) {
+            $('#pageList').show();
+            $(".headC .ico_list").show();
+            $(".headC .ico_list img").removeClass().addClass("c1");
+            setTimeout(function () {
+                $('#pageInfo .pres').addClass('zoomOut');
+                $('#pageList').addClass('open');
+                $('body').css({overflow: 'scroll'});
+            }, 0);
+        } else {
+            $("#pageList").removeClass("open");
+            $('#pageInfo .pres').removeClass('zoomOut');
+            $(".headC .ico_list img").removeClass().addClass("c2");
+            $('body').css({overflow: 'hidden'});
+        }
+    });
+    //第四页
+    $("div.homeDir").click(function () {
+        $(this).css("borderColor", "yellow");
+        $("#detailsPage").show();
+        setTimeout(function () {
+            $('#detailsPage').addClass('open');
+            $('#pageList').addClass('close');
+            $('body').css({overflow: 'hidden'});
+        }, 400);
+    });
+    $("#det_close").click(function () {
+        $("#pageList").show();
+        setTimeout(function () {
+            $('#detailsPage').removeClass();
+            $('#pageList').removeClass('close');
+            $('body').css({overflow: 'scroll'});
+        }, 400);
+    });
 });
 
 
