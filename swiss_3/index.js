@@ -36,6 +36,7 @@
 
     $('#submit').click(function (e) {
         $('#pageList').show();
+        $('#pageList').css({display:'block'});
         $(".headC .ico_list").show();
         $(".headC .ico_list img").removeClass().addClass("c1");
         var oText = document.querySelectorAll(".pres ul li input[type='text']");
@@ -61,21 +62,25 @@
         setTimeout(function () {
             $('#pageInfo .pres').addClass('zoomOut');
             $('#pageList').addClass('open');
+            $('#pageList').css({display:'block'});
             $('body').css({overflow: 'scroll'})
         }, 0);
     });
     $(".headC .ico_list").bind("click",function (e) {
         if (!$("#pageInfo .pres").hasClass("zoomOut")) {
             $('#pageList').show();
+            $('#pageList').css({display:'block'});
             $(".headC .ico_list").show();
             $(".headC .ico_list img").removeClass().addClass("c1");
             setTimeout(function () {
                 $('#pageInfo .pres').addClass('zoomOut');
                 $('#pageList').addClass('open');
+                $('#pageList').css({display:'block'});
                 $('body').css({overflow: 'scroll'});
             }, 0);
         } else {
             $("#pageList").removeClass("open");
+            $('#pageList').css({display:'none'});
             $('#pageInfo .pres').removeClass('zoomOut');
             $(".headC .ico_list img").removeClass().addClass("c2");
             $('body').css({overflow:'hidden'});
@@ -94,11 +99,13 @@
             $(this).css("display","block");
             $('#detailsPage').addClass('open');
             $('#pageList').addClass('close');
+            $('#pageList').css({display:'none'});
             $('body').css({overflow: 'hidden'});
         }, 400);
     });
     $("#det_close").click(function () {
         $("#pageList").show();
+        $('#pageList').css({display:'block'});
         setTimeout(function () {
             $("#detailsPage").css({display:"none"});
             $('#detailsPage').removeClass();
