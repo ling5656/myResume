@@ -2,6 +2,7 @@
     var openEl = null;
     $('#ul1 li').click(function () {
         openEl = $(this);
+        openEl.addClass('active');
         $('#keepOut').show();
         $('.modal').css({left: openEl.offset().left + (125 / 2), top: openEl.offset().top + (75 / 2)}).show();
         $(".modal-body strong")[0].innerHTML = "你选择了\"" + $(this).attr("val") + "\"组别,之后你将无法修改此分组设置,要继续吗?";
@@ -36,9 +37,8 @@
 
     $('#submit').click(function (e) {
         $('#pageList').show();
-        $('#pageList').css({display:'block'});
-        $(".headC .ico_list").show();
-        $(".headC .ico_list img").removeClass().addClass("c1");
+        $('#pageList').css({display: 'block'});
+
         var oText = document.querySelectorAll(".pres ul li input[type='text']");
         for (var i = 0; i < oText.length; i++) {
             //清空前后的空格
@@ -61,54 +61,63 @@
         }
         setTimeout(function () {
             $('#pageInfo .pres').addClass('zoomOut');
+
             $('#pageList').addClass('open');
-            $('#pageList').css({display:'block'});
+            $('#pageList').css({display: 'block'});
             $('body').css({overflow: 'scroll'})
+
+            $(".total .ico_list").show();
         }, 0);
     });
-    $(".headC .ico_list").bind("click",function (e) {
+    $(".total .ico_list").bind("click", function (e) {
         if (!$("#pageInfo .pres").hasClass("zoomOut")) {
             $('#pageList').show();
-            $('#pageList').css({display:'block'});
-            $(".headC .ico_list").show();
-            $(".headC .ico_list img").removeClass().addClass("c1");
+            $('#pageList').css({display: 'block'});
+            $(".total .ico_list").removeClass("rtt");
             setTimeout(function () {
                 $('#pageInfo .pres').addClass('zoomOut');
                 $('#pageList').addClass('open');
-                $('#pageList').css({display:'block'});
+                $('#pageList').css({display: 'block'});
                 $('body').css({overflow: 'scroll'});
             }, 0);
         } else {
             $("#pageList").removeClass("open");
-            $('#pageList').css({display:'none'});
+            $('#pageList').css({display: 'none'});
             $('#pageInfo .pres').removeClass('zoomOut');
-            $(".headC .ico_list img").removeClass().addClass("c2");
-            $('body').css({overflow:'hidden'});
-            //setTimeout(function () {
-            //    $("#pageList").addClass("closeBack");
-            //    $('body').css({overflow: 'hidden'});
-            //}, 400);
+            $(".total .ico_list").addClass("rtt");
+            $('body').css({overflow: 'hidden'});
+        }
+        //if( $(".total .ico_list").hasClass("rtt")){
+        //    $("#btn").attr("value","更新");
+        //}
+        if( $(".total .ico_list").addClass("rtt")){
+            $("#btn").attr("value","更新");
         }
     });
+
+
     //第四页
+    var openDir=null;
     $("div.homeDir").click(function () {
-        $(this).css("borderColor", "yellow");
+        openDir=$(this);
+        openDir.addClass('color');
+
         $("#detailsPage").show();
 
         setTimeout(function () {
-            $(this).css("display","block");
+            $(this).css("display", "block");
             $('#detailsPage').addClass('open');
             $('#pageList').addClass('close');
-            $('#pageList').css({display:'none'});
+            $('#pageList').css({display: 'none'});
             $('body').css({overflow: 'hidden'});
         }, 400);
     });
     $("#det_close").click(function () {
         $("#pageList").show();
-        $('#pageList').css({display:'block'});
+        $('#pageList').css({display: 'block'});
         setTimeout(function () {
-            $("#detailsPage").css({display:"none"});
-            $('#detailsPage').removeClass();
+            $("#detailsPage").css({display: "none"});
+            $('#detailsPage').removeClass('close');
             $('#pageList').removeClass('close');
             $('body').css({overflow: 'scroll'});
         }, 400);

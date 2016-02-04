@@ -74,12 +74,14 @@ html, body {
 .keepOut.open {
     opacity: 0.7;
 }
-.info-list{
+
+.info-list {
     position: relative;
     top: 0;
     left: 0;
     z-index: 15;
 }
+
 .total {
     position: absolute;
     left: 0;
@@ -89,7 +91,8 @@ html, body {
     height: 68px;
 
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 1px 2px rgba(193,193,193,193);
+    box-shadow: 0 1px 2px rgba(193, 193, 193, 193);
+
 }
 
 .total .headS {
@@ -106,6 +109,7 @@ html, body {
 .total .headC {
     margin-left: 82px;
     padding-top: 13px;
+    width: 200px;
 }
 
 .context .total .p1 {
@@ -127,14 +131,12 @@ html, body {
     margin-top: 3px;
 }
 
-
 /*第一页*/
 #pageHome {
     display: block;
     position: absolute;
     left: 0;
-    /*top: -0.65%;*/
-    background: url("images/BacG.jpg")no-repeat center center;
+    background: url("images/BacG.jpg") no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -208,7 +210,30 @@ html, body {
 .title .main1 ul li a img {
     position: absolute;
     right: 15px;
+    color: #f00;
 }
+
+/*.title .main1 ul li a svg {*/
+    /*float: right*/
+/*}*/
+
+/*.title .main1 ul li a svg path {*/
+    /*fill: #f00*/
+/*}*/
+
+/*.title .main1 ul li.active a svg path {*/
+    /*fill: blue;*/
+    /*transition: 1s;*/
+/*}*/
+
+/*.title .main1 ul li a svg {*/
+    /*transition: 0.4s;*/
+    /*transform: rotate(0deg);*/
+/*}*/
+
+/*.title .main1 ul li.active a svg {*/
+    /*transform: rotate(90deg);*/
+/*}*/
 
 /*第二页*/
 #pageInfo {
@@ -219,7 +244,7 @@ html, body {
     -webkit-transform: translate(100%, 0);
     width: 100%;
     height: 100%;
-    background: url("images/Background_blur1212.jpg")no-repeat;
+    background: url("images/Background_blur1212.jpg") no-repeat;
     background-size: cover;
     overflow: hidden;
     position: absolute;
@@ -277,14 +302,11 @@ html, body {
     outline: none;
     background-color: transparent;
     color: rgb(255, 255, 255);
-
     font-size: 14px;
 }
 
 .pres ul .submit {
-
     text-align: center;
-
 }
 
 /*第三页*/
@@ -341,12 +363,22 @@ html, body {
 }
 
 #pageList .homePage .homeDir {
-    background: url("images/icon_right.svg") no-repeat right;
-    border: 1px solid red;
     margin: 0 15px 5px 0;
     padding: 10px;
-    background-color: #C1C1C1;
+}
 
+#pageList .homePage .homeDir a svg {
+    float: right;
+    margin: -17px 15px 5px 0;
+    /*padding: 10px;*/
+}
+
+#pageList .homePage .homeDir a svg path {
+    fill: #DA202C;
+}
+
+#pageList .homePage .homeDir.color a svg path {
+    fill: #808080;
 }
 
 /*第四页*/
@@ -357,7 +389,8 @@ html, body {
 
 .header {
     height: 68px;
-    box-shadow: 0 3px 2px #C1C1C1;
+    box-shadow: 0 1px 2px rgba(193, 193, 193, 193);
+
     position: relative;
 }
 
@@ -371,13 +404,17 @@ html, body {
     position: absolute;
     left: 85%;
     top: 40%;
-    background: #C1C1C1;
+
+}
+
+#det_close a svg path {
+    fill: #C1C1C1;
 }
 
 /*------------------*/
 #pageList.close {
-    transform: translate(-100%, 0);
-    -webkit-transform: translate(-100%, 0);
+    transform: translate(-200%, 0);
+    -webkit-transform: translate(-200%, 0);
 }
 
 #pageList.closeBack {
@@ -441,23 +478,37 @@ html, body {
     margin: 16px;
 }
 
+#detailsPage .receipt a svg {
+    float: right;
+    margin-top: -32px;
+    margin-right: 20px;
+}
+
+#detailsPage .receipt a svg path {
+    fill: #DA202C;
+}
+
 .headC {
     position: relative;
 }
-
-.headC .ico_list {
+.total .ico_list{
     display: none;
-    position: absolute;
-    top: 40%;
-    left: 85%;
 }
-
-.headC .ico_list img.c1 {
+.total .ico_list a svg {
+    float: right;
+    margin-right: 45px;
+    margin-top: -22px;
+}
+.total .ico_list a svg{
+    fill: #808080;
+}
+.total .ico_list a svg {
     transform: rotate(90deg);
 }
 
-.headC .ico_list img.c2 {
-    transform: rotate(-90deg);
+.total .ico_list.rtt a svg {
+
+    transform: rotate(270deg);
 }
 
 @media screen and (max-height: 480px) {
@@ -469,9 +520,11 @@ html, body {
     .title .main1 .ul1 li a {
         padding: 8px;
     }
-    #pageHome{
+
+    #pageHome {
         top: -2.5px;
     }
+
     .context .pres {
         margin-top: 25px;
     }
@@ -506,34 +559,41 @@ html, body {
     #pageList {
         margin-top: 62px;
     }
-    .headerInfo{
+
+    .headerInfo {
         font-size: 20px;
         padding: 24px;
     }
-    #detailsPage .infoImg{
+
+    #detailsPage .infoImg {
         margin: 20px;
         height: 155px;
     }
-    #detailsPage .infoDes{
+
+    #detailsPage .infoDes {
         font-size: 13px;
         margin: 20px;
     }
-    #detailsPage .receipt{
+
+    #detailsPage .receipt {
         margin: 20px;
         width: 165px;
         height: 40px;
     }
-    #detailsPage .receipt p{
+
+    #detailsPage .receipt p {
         margin: 12px;
     }
 }
-@media screen and (height: 667px){
+
+@media screen and (height: 667px) {
     /*当屏幕尺寸等于667px时，应用下面的CSS样式*/
-    .context .pres ul li{
+    .context .pres ul li {
         margin: 20px 30px 0;
         padding: 14px;
     }
 }
+
 @media screen and (min-height: 736px) {
     /*当屏幕尺寸大于736px时，应用下面的CSS样式*/
     .title .main .p1 {
@@ -573,19 +633,23 @@ html, body {
     .pres ul li input[type="text"] {
         font-size: 17px;
     }
-    #detailsPage .infoImg{
+
+    #detailsPage .infoImg {
         height: 220px;
         margin: 30px 15px;
     }
-    #detailsPage .infoDes{
+
+    #detailsPage .infoDes {
         font-size: 18px;
         margin: 30px 15px;
     }
-    #detailsPage .receipt{
+
+    #detailsPage .receipt {
         width: 200px;
         height: 50px;
     }
-    #detailsPage .receipt p{
+
+    #detailsPage .receipt p {
         font-size: 18px;
     }
 }
