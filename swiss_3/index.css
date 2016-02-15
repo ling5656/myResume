@@ -83,7 +83,7 @@ html, body {
 }
 
 .total {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 14;
@@ -213,28 +213,6 @@ html, body {
     color: #f00;
 }
 
-/*.title .main1 ul li a svg {*/
-    /*float: right*/
-/*}*/
-
-/*.title .main1 ul li a svg path {*/
-    /*fill: #f00*/
-/*}*/
-
-/*.title .main1 ul li.active a svg path {*/
-    /*fill: blue;*/
-    /*transition: 1s;*/
-/*}*/
-
-/*.title .main1 ul li a svg {*/
-    /*transition: 0.4s;*/
-    /*transform: rotate(0deg);*/
-/*}*/
-
-/*.title .main1 ul li.active a svg {*/
-    /*transform: rotate(90deg);*/
-/*}*/
-
 /*第二页*/
 #pageInfo {
     display: none;
@@ -297,7 +275,7 @@ html, body {
     color: #FFF !important;
 }
 
-.pres ul li input[type="submit"] {
+.pres ul li input[type="button"] {
     border: none;
     outline: none;
     background-color: transparent;
@@ -333,6 +311,7 @@ html, body {
 }
 
 #pageList .homePage {
+
     background-color: rgb(255, 255, 255);
     margin: 15px;
     box-shadow: 2px 2px 0 #f2f2f2;
@@ -354,6 +333,13 @@ html, body {
     margin-right: 44px;
     text-overflow: ellipsis;
     /*white-space:nowrap;*/
+
+}
+.homePage .homePage-nb{
+    margin: 15px;
+    background: yellow;
+
+    border: 1px solid red;
 
 }
 
@@ -491,17 +477,23 @@ html, body {
 .headC {
     position: relative;
 }
-.total .ico_list{
+
+.total .ico_list {
+
     display: none;
 }
+
 .total .ico_list a svg {
+
     float: right;
     margin-right: 45px;
     margin-top: -22px;
 }
-.total .ico_list a svg{
+
+.total .ico_list a svg {
     fill: #808080;
 }
+
 .total .ico_list a svg {
     transform: rotate(90deg);
 }
