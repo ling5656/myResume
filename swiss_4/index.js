@@ -95,6 +95,7 @@
         }
         if ($(".total .ico_list").addClass("rtt")) {
             $("#btn").attr("value", "更新");
+
         }
     });
 
