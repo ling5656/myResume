@@ -5,18 +5,20 @@
 
 html, body {
     width: 100%;
-    /*overflow: hidden;*/
+    height: 100%;
+
+  
     /*font-size: 14px;*/
 }
 
 .logo {
-    height: 82px;
+    height: 1.64rem;
 }
 
 .logo img {
     position: relative;
-    width: 82px;
-    height: 82px;
+    width: 1.64rem;
+    height: 1.64rem;
     float: right;
 }
 
@@ -49,6 +51,7 @@ html, body {
     border-top: 1px solid #DDD;
     background-color: rgb(255, 255, 255);
     padding: 15px;
+    font-size: 20px;
 }
 
 .modal-footer button {
@@ -83,52 +86,56 @@ html, body {
 }
 
 .total {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     z-index: 14;
     width: 100%;
-    height: 68px;
+    height: 1.36rem;
 
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 1px 2px rgba(193, 193, 193, 193);
+    box-shadow: 0 0.02rem 0.04rem rgba(193, 193, 193, 193);
 
 }
 
 .total .headS {
-    width: 52px;
-    height: 52px;
-    margin: 8px 15px 8px;
+    width: 1.04rem;
+    height: 1.04rem;
+    margin: 0.16rem 0.3rem 0.16rem;
     background-color: transparent;
     border-radius: 50%;
-    border: 1px solid red;
+    border: 0.02rem solid red;
     float: left;
     box-sizing: border-box;
 }
 
 .total .headC {
-    margin-left: 82px;
-    padding-top: 13px;
-    width: 200px;
+    margin-left: 1.64rem;
+    padding-top: 0.26rem;
+    width: 4rem;
 }
 
 .context .total .p1 {
     display: inline-block;
-    margin: 13px 0 0 82px;
-    font-size: 22px;
+    margin: 0.26rem 0 0 1.64rem;
+    font-size: 0.44rem;
 }
 
 .context .total .p2 {
     display: inline-block;
-    width: 28px;
-    height: 14px;
-    margin: 41px 264px 13px 82px;
-    font-size: 14px;
+    width: 0.56rem;
+    height: 0.28rem;
+    margin: 0.82rem 5.28rem 0.26rem 1.64rem;
+    font-size: 0.28rem;
+}
+
+.head-username {
+    font-size: 0.46rem;
 }
 
 .head-city {
-    font-size: 14px;
-    margin-top: 3px;
+    font-size: 0.28rem;
+    margin-top: 0.06rem;
 }
 
 /*第一页*/
@@ -160,7 +167,7 @@ html, body {
 
 .title {
     /*width: 100%;*/
-    margin-left: 30px;
+    margin-left: 0.6rem;
 }
 
 .title .main {
@@ -170,46 +177,46 @@ html, body {
 
 .title .main .p1 {
     /*letter-spacing: 2px;*/
-    font-size: 24px;
-    height: 32px;
-    line-height: 32px;
+    font-size: 0.48rem;
+    height: 0.64rem;
+    line-height: 0.64rem;
 }
 
 .title .main .p2 {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 0.2rem;
+    font-size: 0.28rem;
 }
 
 .title .main1 .ul1 li a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.28rem;
     color: rgb(255, 255, 255);
 }
 
 .title .main1 {
-    margin-top: 30px;
+    margin-top: 0.6rem;
     /*margin-right: 210px;*/
 }
 
 .title .main1 ul li {
     width: 50%;
     list-style: none;
-    border: 1px solid rgb(243, 243, 243);
+    border: 0.02rem solid rgb(243, 243, 243);
     color: rgb(255, 255, 255);
     background-color: rgba(200, 196, 196, 0.3);
-    margin-top: 15px;
+    margin-top: 0.3rem;
 
 }
 
 .title .main1 ul li a {
-    padding: 15px;
+    padding: 0.3rem;
     position: relative;
     display: block;
 }
 
 .title .main1 ul li a img {
     position: absolute;
-    right: 15px;
+    right: 0.3rem;
     color: #f00;
 }
 
@@ -237,7 +244,7 @@ html, body {
 }
 
 #pageInfo.open .pres {
-    margin-top: 95px;
+    margin-top: 1.7rem;
     transition: 0.2s;
     transform: scale(1, 1);
     -webkit-transition: 0.2s;
@@ -250,12 +257,12 @@ html, body {
 }
 
 .context .pres ul li {
-    margin: 16px 30px 0;
+    margin: 0.32rem 0.6rem 0;
     list-style: none;
-    border: 1px solid rgb(243, 243, 243);
+    border: 0.02rem solid rgb(243, 243, 243);
     color: rgb(255, 255, 255);
-    font-size: 14px;
-    padding: 12px;
+    font-size: 0.2rem;
+    padding: 0.24rem;
 }
 
 .pres ul li input[type="text"], .pres ul li input[type="email"] {
@@ -263,7 +270,7 @@ html, body {
     width: 100%;
     outline: none;
     background-color: transparent;
-    font-size: 14px;
+    font-size: 0.24rem;
     color: #FFF;
 }
 
@@ -280,7 +287,7 @@ html, body {
     outline: none;
     background-color: transparent;
     color: rgb(255, 255, 255);
-    font-size: 14px;
+    font-size: 0.28rem;
 }
 
 .pres ul .submit {
@@ -289,7 +296,7 @@ html, body {
 
 /*第三页*/
 #pageList {
-    margin-top: 68px;
+    margin-top: 1.36rem;
     background-color: #F3F3F3;
     position: absolute;
     width: 100%;
@@ -305,6 +312,15 @@ html, body {
 
 }
 
+.pageList-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
 #pageList.open {
     transform: translate(0, 0);
     -webkit-transform: translate(0, 0);
@@ -313,49 +329,50 @@ html, body {
 #pageList .homePage {
 
     background-color: rgb(255, 255, 255);
-    margin: 15px;
-    box-shadow: 2px 2px 0 #f2f2f2;
-    border: 1px solid rgb(193, 193, 193);
+    margin: 0.3rem;
+    box-shadow: 0.04rem 0.04rem 0 #f2f2f2;
+    border: 0.02rem solid rgb(193, 193, 193);
 }
 
 #pageList .homePage .infoTitle {
-    margin: 16px;
-    font-size: 22px;
+    margin: 0.32rem;
+    font-size: 0.44rem;
     color: rgb(0 0 0);
-    margin-bottom: 27px;
+    margin-bottom: 0.54rem;
 }
 
 #pageList .homePage .infoContext {
-    margin: 10px 10px;
-    font-size: 14px;
+    margin: 0.2rem 0.2rem;
+    font-size: 0.28rem;
     color: rgb(128 128 128);
     overflow: hidden;
-    margin-right: 44px;
+    margin-right: 0.88rem;
     text-overflow: ellipsis;
     /*white-space:nowrap;*/
 
 }
-.homePage .homePage-nb{
-    margin: 15px;
+
+.homePage .homePage-nb {
+    margin: 0.3rem auto;
     background: yellow;
 
-    border: 1px solid red;
+    border: 0.02rem solid red;
 
 }
 
 .infoContext {
     /*height: 40px;*/
-    line-height: 22px;
+    line-height: 0.44rem;
 }
 
 #pageList .homePage .homeDir {
-    margin: 0 15px 5px 0;
-    padding: 10px;
+    /*margin: 0 0.3rem 0.1rem 0;*/
+    padding: 0.05rem;
 }
 
 #pageList .homePage .homeDir a svg {
     float: right;
-    margin: -17px 15px 5px 0;
+    margin: -0.34rem 0.3rem 0.1rem 0;
     /*padding: 10px;*/
 }
 
@@ -374,22 +391,22 @@ html, body {
 }
 
 .header {
-    height: 68px;
-    box-shadow: 0 1px 2px rgba(193, 193, 193, 193);
+    height: 1.38rem;
+    box-shadow: 0 0.02rem 0.04rem rgba(193, 193, 193, 193);
 
     position: relative;
 }
 
 .headerInfo {
     display: block;
-    font-size: 22px;
-    padding: 20px;
+    font-size: 0.44rem;
+    padding: 0.4rem;
 }
 
 #det_close {
     position: absolute;
-    left: 85%;
-    top: 40%;
+    left: 90%;
+    top: -10%;
 
 }
 
@@ -438,36 +455,36 @@ html, body {
 
 /*-------------------*/
 #detailsPage .infoImg {
-    height: 165px;
-    border: 1px solid red;
-    margin: 15px;
+    height: 3.3rem;
+    border: 0.02rem solid red;
+    margin: 0.3rem;
 }
 
 #detailsPage .infoDes {
-    font-size: 14px;
+    font-size: 0.28rem;
     color: #808080;
 
-    margin: 15px;
+    margin: 0.3rem;
 }
 
 #detailsPage .receipt {
-    width: 170px;
-    height: 46px;
-    margin: 15px;
-    border: 1px solid #DA202C;
+    width: 3.4rem;
+    height: 0.92rem;
+    margin: 0.3rem;
+    border: 0.02rem solid #DA202C;
 
 }
 
 #detailsPage .receipt p {
-    font-size: 14px;
+    font-size: 0.28rem;
     color: #DA202C;
-    margin: 16px;
+    margin: 0.32rem;
 }
 
 #detailsPage .receipt a svg {
     float: right;
-    margin-top: -32px;
-    margin-right: 20px;
+    margin-top: -0.64rem;
+    margin-right: 0.4rem;
 }
 
 #detailsPage .receipt a svg path {
@@ -486,8 +503,8 @@ html, body {
 .total .ico_list a svg {
 
     float: right;
-    margin-right: 45px;
-    margin-top: -22px;
+    margin-right: 0.9rem;
+    margin-top: -0.44rem;
 }
 
 .total .ico_list a svg {
@@ -503,145 +520,147 @@ html, body {
     transform: rotate(270deg);
 }
 
-@media screen and (max-height: 480px) {
-    /*当屏幕尺寸小于480px时，应用下面的CSS样式*/
-    .title .main1 ul li {
-        margin-top: 15px;
-    }
 
-    .title .main1 .ul1 li a {
-        padding: 8px;
-    }
 
-    #pageHome {
-        top: -2.5px;
-    }
+/*@media screen and (max-height: 480px) {*/
+/*/!*当屏幕尺寸小于480px时，应用下面的CSS样式*!/*/
+/*.title .main1 ul li {*/
+/*margin-top: 15px;*/
+/*}*/
 
-    .context .pres {
-        margin-top: 25px;
-    }
+/*.title .main1 .ul1 li a {*/
+/*padding: 8px;*/
+/*}*/
 
-    .context .pres ul li {
-        margin: 13px 32px 0;
-        padding: 10px;
-    }
+/*#pageHome {*/
+/*top: -2.5px;*/
+/*}*/
 
-    .title .main .p1 {
-        height: 28px;
-        font-size: 20px;
-    }
+/*.context .pres {*/
+/*margin-top: 25px;*/
+/*}*/
 
-    .title .main .p2 {
-        margin-top: 10px;
-        font-size: 13px;
-    }
+/*.context .pres ul li {*/
+/*margin: 13px 32px 0;*/
+/*padding: 10px;*/
+/*}*/
 
-    .title .main1 {
-        margin-top: 25px;
-    }
+/*.title .main .p1 {*/
+/*height: 28px;*/
+/*font-size: 20px;*/
+/*}*/
 
-    .total {
-        height: 60px;
-    }
+/*.title .main .p2 {*/
+/*margin-top: 10px;*/
+/*font-size: 13px;*/
+/*}*/
 
-    .total .headS {
-        margin: 4px 15px 8px;
-    }
+/*.title .main1 {*/
+/*margin-top: 25px;*/
+/*}*/
 
-    #pageList {
-        margin-top: 62px;
-    }
+/*.total {*/
+/*height: 60px;*/
+/*}*/
 
-    .headerInfo {
-        font-size: 20px;
-        padding: 24px;
-    }
+/*.total .headS {*/
+/*margin: 4px 15px 8px;*/
+/*}*/
 
-    #detailsPage .infoImg {
-        margin: 20px;
-        height: 155px;
-    }
+/*#pageList {*/
+/*margin-top: 62px;*/
+/*}*/
 
-    #detailsPage .infoDes {
-        font-size: 13px;
-        margin: 20px;
-    }
+/*.headerInfo {*/
+/*font-size: 20px;*/
+/*padding: 24px;*/
+/*}*/
 
-    #detailsPage .receipt {
-        margin: 20px;
-        width: 165px;
-        height: 40px;
-    }
+/*#detailsPage .infoImg {*/
+/*margin: 20px;*/
+/*height: 155px;*/
+/*}*/
 
-    #detailsPage .receipt p {
-        margin: 12px;
-    }
-}
+/*#detailsPage .infoDes {*/
+/*font-size: 13px;*/
+/*margin: 20px;*/
+/*}*/
 
-@media screen and (height: 667px) {
-    /*当屏幕尺寸等于667px时，应用下面的CSS样式*/
-    .context .pres ul li {
-        margin: 20px 30px 0;
-        padding: 14px;
-    }
-}
+/*#detailsPage .receipt {*/
+/*margin: 20px;*/
+/*width: 165px;*/
+/*height: 40px;*/
+/*}*/
 
-@media screen and (min-height: 736px) {
-    /*当屏幕尺寸大于736px时，应用下面的CSS样式*/
-    .title .main .p1 {
-        font-size: 28px;
-    }
+/*#detailsPage .receipt p {*/
+/*margin: 12px;*/
+/*}*/
+/*}*/
 
-    .title .main .p2 {
-        margin-top: 15px;
-        font-size: 18px;
-    }
+/*@media screen and (height: 667px) {*/
+/*/!*当屏幕尺寸等于667px时，应用下面的CSS样式*!/*/
+/*.context .pres ul li {*/
+/*margin: 20px 30px 0;*/
+/*padding: 14px;*/
+/*}*/
+/*}*/
 
-    .title .main1 {
-        margin-top: 35px;
-    }
+/*@media screen and (min-height: 736px) {*/
+/*/!*当屏幕尺寸大于736px时，应用下面的CSS样式*!/*/
+/*.title .main .p1 {*/
+/*font-size: 28px;*/
+/*}*/
 
-    .title .main1 .ul1 li a {
-        font-size: 17px;
-    }
+/*.title .main .p2 {*/
+/*margin-top: 15px;*/
+/*font-size: 18px;*/
+/*}*/
 
-    .title .main1 ul li a {
-        padding: 16px;
-    }
+/*.title .main1 {*/
+/*margin-top: 35px;*/
+/*}*/
 
-    .title .main1 ul li a img {
-        top: 20px;
-    }
+/*.title .main1 .ul1 li a {*/
+/*font-size: 17px;*/
+/*}*/
 
-    .title .main1 ul li {
-        margin-top: 20px;
-    }
+/*.title .main1 ul li a {*/
+/*padding: 16px;*/
+/*}*/
 
-    .context .pres ul li {
-        margin: 24px 30px 0;
-        padding: 18px;
-    }
+/*.title .main1 ul li a img {*/
+/*top: 20px;*/
+/*}*/
 
-    .pres ul li input[type="text"] {
-        font-size: 17px;
-    }
+/*.title .main1 ul li {*/
+/*margin-top: 20px;*/
+/*}*/
 
-    #detailsPage .infoImg {
-        height: 220px;
-        margin: 30px 15px;
-    }
+/*.context .pres ul li {*/
+/*margin: 24px 30px 0;*/
+/*padding: 18px;*/
+/*}*/
 
-    #detailsPage .infoDes {
-        font-size: 18px;
-        margin: 30px 15px;
-    }
+/*.pres ul li input[type="text"] {*/
+/*font-size: 17px;*/
+/*}*/
 
-    #detailsPage .receipt {
-        width: 200px;
-        height: 50px;
-    }
+/*#detailsPage .infoImg {*/
+/*height: 220px;*/
+/*margin: 30px 15px;*/
+/*}*/
 
-    #detailsPage .receipt p {
-        font-size: 18px;
-    }
-}
+/*#detailsPage .infoDes {*/
+/*font-size: 18px;*/
+/*margin: 30px 15px;*/
+/*}*/
+
+/*#detailsPage .receipt {*/
+/*width: 200px;*/
+/*height: 50px;*/
+/*}*/
+
+/*#detailsPage .receipt p {*/
+/*font-size: 18px;*/
+/*}*/
+/*}*/
